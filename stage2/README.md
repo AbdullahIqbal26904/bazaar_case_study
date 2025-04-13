@@ -17,7 +17,7 @@ This is the backend for a scalable Inventory Management System tailored for kiry
 
 ---
 
-## 🗃️ Database Schema
+## Database Schema
 
 The backend uses MySQL with the following tables:
 
@@ -73,15 +73,35 @@ The backend uses MySQL with the following tables:
 - **Tools:** dotenv, cors, express-rate-limit
 
 ---
+# Project Structure
+/controllers       # Business logic
+/models            # Sequelize models
+/routes            # Express route handlers
+/middleware        # Auth, rate limiter, etc.
+/config            # DB connection & env config
 
+
+## Setup Instructions (Important)
+
+1. **Run the MySQL Setup Script**
+
+   Before starting the server, run the provided `.sql` file to set up the required database schema in your MySQL instance:
+
+   ```bash
+   mysql -u your_username -p < schema.sql
 ##  Getting Started (Local)
-
+Edit the .env file and make sure to update the following:
+DB_HOST=localhost
+DB_USER=your_mysql_user
+DB_PASSWORD=your_mysql_password
+DB_NAME=inventory_db
+JWT_SECRET=your_jwt_secret
 ```bash
 # Install dependencies
 npm install
 
-# Set environment variables
-cp .env.example .env
 
 # Run server
-npm run dev
+node server.js
+
+
