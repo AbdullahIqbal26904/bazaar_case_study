@@ -3,12 +3,12 @@ const store = require('../models/Store');
 // Create a new store
 exports.createStore = async (req, res) => {
   try {
-    const { store_name, location } = req.body;
+    const { store_name, location, email, hash_password } = req.body;
     if (!store_name || !location) {
       return res.status(400).json({ error: 'Store name and location are required' });
     }
 
-    const newStore = await store.create({ store_name, location });
+    const newStore = await store.create({ store_name, location, email, hash_password });
     res.status(201).json({ message: 'Store created successfully', store: newStore });
   } catch (error) {
     res.status(500).json({ error: error.message });

@@ -7,7 +7,7 @@ const productRoutes = require('./routes/productRoutes.js');
 const categoryRoutes = require('./routes/categoryRoutes.js');
 const storeRoutes = require('./routes/storeRoutes.js');
 const storeStockRoutes = require('./routes/storestockRoutes.js'); // Add this line
-
+const authRoutes = require('./routes/authRoutes.js');
 dotenv.config();
 const app = express();
 
@@ -18,6 +18,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/categories', categoryRoutes);
 app.use('/api/stores', storeRoutes);
 app.use('/api/storeStocks', storeStockRoutes); 
+app.use('/api/auth', authRoutes); // Add this line
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Product API');
