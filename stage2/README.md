@@ -1,19 +1,19 @@
-# 📦 Inventory Management System – Stage 2 (Backend)
+# Inventory Management System – Stage 2 (Backend)
 
 This is the backend for a scalable Inventory Management System tailored for kiryana (small retail) stores. In **Stage 2**, we introduced authentication, API enhancements, and implemented clean architecture to ensure maintainability, security, and scalability.
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-- 🔐 **JWT Authentication** for store login and protected routes
-- 🧠 **API Client** for centralized `axios` config (frontend support)
-- 🏬 Store-specific **Product & Stock Management**
-- 📊 **Stock Movements** tracked in detail (In, Out, Manual)
-- 📁 **MVC Architecture** for clean and modular codebase
-- ⚡ **Rate Limiter & Caching** to enhance performance
-- ✅ Secure, token-based access control
-- 🔍 Structured data via **MySQL relational database**
+- **JWT Authentication** for store login and protected routes
+- **API Client** for centralized `axios` config (frontend support)
+- Store-specific **Product & Stock Management**
+- **Stock Movements** tracked in detail (In, Out, Manual)
+- **MVC Architecture** for clean and modular codebase
+- **Rate Limiter & Caching** to enhance performance
+- Secure, token-based access control
+- Structured data via **MySQL relational database**
 
 ---
 
@@ -26,11 +26,11 @@ The backend uses MySQL with the following tables:
 - `Products`: Store products with categories
 - `Store_Stock`: Tracks product quantities for each store
 - `Stock_Movements`: Logs all stock-in, out, and manual removals
-- ✅ `store_id` is used for authentication context
+-  `store_id` is used for authentication context
 
 ---
 
-## 🔐 Authentication (JWT)
+##  Authentication (JWT)
 
 - **Login API** returns a JWT token.
 - Pass token in `Authorization: Bearer <token>` header for protected routes.
@@ -38,12 +38,12 @@ The backend uses MySQL with the following tables:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 
 ---
 
-## 🔄 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint               | Description                      |
 |--------|------------------------|----------------------------------|
@@ -55,7 +55,7 @@ The backend uses MySQL with the following tables:
 
 ---
 
-## 🛡️ Security
+##  Security
 
 - Token verification middleware for protected routes
 - Bcrypt used for password hashing
@@ -64,7 +64,7 @@ The backend uses MySQL with the following tables:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend:** Node.js, Express.js
 - **Database:** MySQL
@@ -74,7 +74,7 @@ The backend uses MySQL with the following tables:
 
 ---
 
-## 🧪 Getting Started (Local)
+##  Getting Started (Local)
 
 ```bash
 # Install dependencies
